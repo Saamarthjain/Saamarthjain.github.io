@@ -370,6 +370,24 @@ nav.scrolled { box-shadow: 0 2px 20px var(--shadow); }
 .por-duration { margin-left: auto; font-size: 0.78rem; color: var(--ink3); text-align: right; line-height: 1.5; }
 .por-desc { font-size: 0.88rem; color: var(--ink2); line-height: 1.78; }
 
+/* FINSEC — expandable leadership entry */
+.finsec-list { list-style: none; margin-top: 10px; }
+.finsec-list li { font-size: 0.88rem; color: var(--ink2); line-height: 1.75; padding-left: 18px; position: relative; margin-bottom: 8px; }
+.finsec-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.finsec-list li strong { color: var(--ink); font-weight: 500; }
+.finsec-extra { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.finsec-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 6px 0 4px; }
+.finsec-metric { background: var(--tag-bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px 10px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+.finsec-metric:hover { transform: translateY(-2px); box-shadow: 0 6px 24px var(--shadow); }
+.finsec-metric-num { font-family: 'DM Serif Display', serif; font-size: 1.5rem; line-height: 1.15; color: var(--accent); }
+.finsec-metric-label { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink3); margin-top: 4px; }
+.finsec-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.finsec-toggle { font-family: inherit; font-size: 0.78rem; font-weight: 500; background: var(--tag-bg); color: var(--ink2); border: 1px solid var(--border); border-radius: 20px; padding: 7px 17px; cursor: pointer; transition: all 0.2s; }
+.finsec-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.finsec-cta { font-size: 0.78rem; font-weight: 500; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 20px; padding: 7px 17px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+.finsec-cta:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+@media (max-width: 560px) { .finsec-metrics { grid-template-columns: repeat(2, 1fr); } }
+
 /* FADE IN */
 .fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -729,6 +747,49 @@ nav.scrolled { box-shadow: 0 2px 20px var(--shadow); }
   <h2 class="section-title">Leadership & <em style="font-style:italic;color:var(--accent);">impact</em></h2>
   <div class="por-grid">
 
+    <!-- FINSEC — Finance & Securities Club -->
+    <div class="por-card finsec-card fade-in">
+      <div class="por-header">
+        <div class="por-icon">📈</div>
+        <div>
+          <div class="por-role">Founder &amp; Chair <span class="current-badge" style="margin-left:10px;"><span class="current-dot"></span>Current</span></div>
+          <div class="por-org">FINSEC — Finance &amp; Securities Club · School of Management &amp; Entrepreneurship, IIT Jodhpur</div>
+        </div>
+        <div class="por-duration">Aug 2026 – Present<br/><span style="color:var(--ink3);font-size:0.72rem;">Jodhpur, India</span></div>
+      </div>
+      <p class="por-desc">FINSEC is an independent, student-led finance &amp; securities initiative I founded at the School of Management &amp; Entrepreneurship, IIT Jodhpur — built to close the gap between classroom theory and real markets through hands-on practice, competition and community.</p>
+      <ul class="finsec-list">
+        <li>Founded FINSEC from zero — defined its positioning, operating model and identity — and built a <strong>10-member core team</strong> leading a founding community of <strong>36 students</strong>.</li>
+        <li>Conceptualised &amp; launched <strong>Finance Mondays</strong> and the <strong>FINSEC Capital League</strong> — a paper-trading competition where members manage a simulated <strong>₹10,00,000</strong> NSE / Nifty 50 portfolio.</li>
+        <li>Created the club's <strong>five operating verticals</strong> — Markets, Labs, Cases, Connect and Forum — to structure and scale member engagement.</li>
+      </ul>
+      <div class="finsec-extra">
+        <ul class="finsec-list">
+          <li>Structured the Capital League around investment theses, trade journaling and <strong>risk-adjusted performance</strong> — rewarding decision quality, not just returns.</li>
+          <li>Initiated the <strong>NISM Circle</strong> — a peer-learning and certification-preparation ecosystem for securities-market credentials.</li>
+          <li>Developed FINSEC's digital presence end-to-end — <strong>website, Capital League platform and communication assets</strong>.</li>
+          <li>Driving partnerships, alumni &amp; industry engagement, finance workshops, competitions and long-term strategy.</li>
+        </ul>
+        <div class="finsec-metrics">
+          <div class="finsec-metric"><div class="finsec-metric-num">36</div><div class="finsec-metric-label">Founding Members</div></div>
+          <div class="finsec-metric"><div class="finsec-metric-num">10</div><div class="finsec-metric-label">Core Team</div></div>
+          <div class="finsec-metric"><div class="finsec-metric-num">₹10L</div><div class="finsec-metric-label">Simulated Capital</div></div>
+          <div class="finsec-metric"><div class="finsec-metric-num">5</div><div class="finsec-metric-label">Operating Verticals</div></div>
+        </div>
+      </div>
+      <div class="finsec-actions">
+        <button class="finsec-toggle" type="button" aria-expanded="false">Read the full story ↓</button>
+        <a class="finsec-cta" href="https://saamarthjain.github.io/finsec" target="_blank" rel="noopener noreferrer">View FINSEC →</a>
+      </div>
+      <div class="timeline-tags" style="margin-top:12px;">
+        <span class="tl-tag">Entrepreneurship</span>
+        <span class="tl-tag">Leadership</span>
+        <span class="tl-tag">Finance</span>
+        <span class="tl-tag">Product Building</span>
+        <span class="tl-tag">Community Building</span>
+      </div>
+    </div>
+
     <div class="por-card fade-in">
       <div class="por-header">
         <div class="por-icon">📷</div>
@@ -837,14 +898,14 @@ nav.scrolled { box-shadow: 0 2px 20px var(--shadow); }
   <p class="contact-sub">Whether you have an opportunity, a collaboration idea, or just want to connect — I'm always open to a good conversation.</p>
   <div class="contact-links">
     <a href="https://www.linkedin.com/in/saamarth-jain" target="_blank" class="contact-link">💼 &nbsp;LinkedIn</a>
-    <a href="mailto:saamarthjain.in@gmail.com" class="contact-link">✉️ &nbsp;saamarthjain.in@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#9deefcfcf0fcefe9f5f7fcf4f3b3f4f3ddfaf0fcf4f1b3fef2f0" class="contact-link">✉️ &nbsp;<span class="__cf_email__" data-cfemail="d2a1b3b3bfb3a0a6bab8b3bbbcfcbbbc92b5bfb3bbbefcb1bdbf">[email&#160;protected]</span></a>
     <a href="https://www.instagram.com/saamarthhhh/" target="_blank" class="contact-link">📸 &nbsp;Instagram</a>
     <a href="https://drive.google.com/file/d/1OdodksWni5OAYAe8O8TucszgkIZJGAbJ/view?usp=sharing" target="_blank" class="contact-link">📄 &nbsp;Resume PDF</a>
   </div>
   <div class="contact-footer">Gurugram, Haryana, India &nbsp;·&nbsp; Open to full-time opportunities</div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Dark mode
 const html = document.documentElement;
 const toggleBtn = document.getElementById('themeToggle');
@@ -906,6 +967,18 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
   });
 });
+
+// FINSEC expandable card
+document.querySelectorAll('.finsec-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.finsec-card');
+    const extra = card.querySelector('.finsec-extra');
+    const isOpen = card.classList.toggle('open');
+    extra.style.maxHeight = isOpen ? extra.scrollHeight + 'px' : '0px';
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.textContent = isOpen ? 'Show less ↑' : 'Read the full story ↓';
+  });
+});
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46dff79ff42adb1',t:'MTc5MTM4NzU1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
